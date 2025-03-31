@@ -20,6 +20,8 @@ int main() {
     float pib2 = 33.4;              //em bilhoes de reais
     int pontos_turisticos2 = 21;
 
+    // Exibir Carta 1
+
         printf("Carta 1: \n");
         printf("Estado: %s\n", estado1);
         printf("Codigo da Carta: %s\n", codigo_carta1);
@@ -28,6 +30,8 @@ int main() {
         printf("Area: %.2f km2\n", area1);
         printf("PIB: %.2f bilhoes de reais \n", pib1);
         printf("Pontos Turisticos: %d \n", pontos_turisticos1);
+
+    //Exibir Carta 2
 
         printf("Carta 2: \n");
         printf("Estado: %s\n", estado2);
