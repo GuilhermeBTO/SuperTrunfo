@@ -7,8 +7,8 @@ int main() {
     char codigo_carta1[] = "A01";
     char nome_cidade1[] = "Manaus";
     int populacao1 = 2064000;
-    float area1 = 11401;
-    float pib1 = 103.281;
+    float area1 = 11401;             // em km2
+    float pib1 = 103.281;            // em bilhoes de reias
     int pontos_turisticos1 = 30;
 
     // Dados para a Carta 2 
@@ -16,8 +16,8 @@ int main() {
     char codigo_carta2[] = "B02";
     char nome_cidade2[] = "Belem";
     int populacao2 = 1398531;
-    float area2 = 1059;
-    float pib2 = 33.4;
+    float area2 = 1059;             //em km2
+    float pib2 = 33.4;              //em bilhoes de reais
     int pontos_turisticos2 = 21;
 
     //exibir carta 1

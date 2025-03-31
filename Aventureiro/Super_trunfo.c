@@ -7,8 +7,8 @@ int main() {
     char codigo_carta1[] = "A01";
     char nome_cidade1[] = "Manaus";
     int populacao1 = 2064000;
-    float area1 = 11401;
-    float pib1 = 103.281;
+    float area1 = 11401;           // em km2
+    float pib1 = 103.281;          // em bilhoes de reais
     int pontos_turisticos1 = 30;
 
     // Dados para a Carta 2 
@@ -16,21 +16,21 @@ int main() {
     char codigo_carta2[] = "B02";
     char nome_cidade2[] = "Belem";
     int populacao2 = 1398531;
-    float area2 = 1059;
-    float pib2 = 33.4;
+    float area2 = 1059;           // em km2
+    float pib2 = 33.4;            // em bilhoes de reais
     int pontos_turisticos2 = 21;
 
     //calcular a densidadee populacional da carta 1:
     float densidade_populacional1 = populacao1/area1;
    
     //calcular o PIB per capita da carta 1:
-    float pib_per_capita1 = pib1*1000000/populacao1;
+    float pib_per_capita1 = pib1*1000000000/populacao1;
 
     //calcular a densidade populacional da carta 2:
     float densidade_populacional2 = populacao2/area2;
 
     //calcular o PIB per capita da carta 2:
-    float pib_per_capita2 = pib2*1000000/populacao2;
+    float pib_per_capita2 = pib2*1000000000/populacao2;
     
     //exibir carta 1
     void exibir_carta(char estado1[], char codigo_carta1[], char nome_cidade1[], int populacao1, float area1, float pib1, int pontos_turisticos1, float densidade_populacional1, float pib_per_capita1); {
