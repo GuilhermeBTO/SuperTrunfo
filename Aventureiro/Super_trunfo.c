@@ -16,7 +16,7 @@ int main() {
     char codigo_carta2[] = "B02";
     char nome_cidade2[] = "Belem";
     int populacao2 = 1398531;
-    float area2 = 1059;           // em km2
+    float area2 = 1059;           // em km    
     float pib2 = 33.4;            // em bilhoes de reais
     int pontos_turisticos2 = 21;
 
