@@ -21,17 +21,17 @@ int main() {
     int pontos_turisticos2 = 21;
 
     //calcular a densidadee populacional da carta 1:
-    float densidade_populacional1 = populacao1/area1;
+    float densidade_populacional1 = (float) populacao1/area1;
    
     //calcular o PIB per capita da carta 1:
     float pib_per_capita1 = pib1*1000000000/populacao1;
 
     //calcular a densidade populacional da carta 2:
-    float densidade_populacional2 = populacao2/area2;
+    float densidade_populacional2 = (float) populacao2/area2;
 
     //calcular o PIB per capita da carta 2:
     float pib_per_capita2 = pib2*1000000000/populacao2;
-    
+   
     //exibir carta 1
     
         printf("Estado: %s\n", estado1);
