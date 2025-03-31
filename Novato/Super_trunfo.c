@@ -31,6 +31,8 @@ int main() {
         printf("PIB: %.2f bilhoes de reais \n", pib1);
         printf("Pontos Turisticos: %d \n", pontos_turisticos1);
 
+        printf("\n"); // linha em branco para separar as cartas
+
     //Exibir Carta 2
 
         printf("Carta 2: \n");
