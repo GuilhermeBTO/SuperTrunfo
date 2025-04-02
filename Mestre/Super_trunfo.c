@@ -43,7 +43,6 @@ int main() {
     printf("Pontos Turisticos: %d \n", pontos_turisticos1);
     printf("Densidade populacional: %.2f habitantes por km2\n", densidade_populacional1);
     printf("PIB per capita: %.2f reais\n", pib_per_capita1);
-
     printf("\n"); // Linha em branco para separar as cartas.
 
     // exibir carta 2
@@ -61,12 +60,10 @@ int main() {
     printf("\n"); // Linha em branco para separar
 
     // Calculo do Super poder
-
     float Super_Poder1 = (float) populacao1 + area1 + pib1 + (float) pontos_turisticos1 + pib_per_capita1 + (1 / densidade_populacional1 );
     float Super_Poder2 = (float) populacao2 + area2 + pib2 + (float) pontos_turisticos2 + pib_per_capita2 + (1 / densidade_populacional2 );
 
-    printf("Comparacao das Cartas: \n");
-    
+    printf("COMPARACAO DAS CARTAS: \n");
     printf("\n"); // Linha em branco para separar
     
     // Resultado (1) para Carta 1.
@@ -79,8 +76,6 @@ int main() {
     printf("Densidade Populacional (vence a menor densidade): Carta 1 venceu! (%d) \n", densidade_populacional1 > densidade_populacional2);
     printf("PIB per capita: Carta 1 Venceu! (%d) \n", pib_per_capita1 > pib_per_capita2);
     printf("Super poder: Carta 1 Venceu! (%d) \n", Super_Poder1 > Super_Poder2);
-
-
     printf("\n"); // Linha em branco para separar
 
     return 0;
