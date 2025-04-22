@@ -58,72 +58,107 @@ int main() {
     printf("PIB per capita: %.2f reais\n", pib_per_capita2);
     printf("\n");
 
-    int opcao;
+int opcao1, opcao2, resultado;
+float soma_carta1 = 0;
+float soma_carta2 = 0;
 
-    // comparação das cartas
-    printf("COMPARACAO DAS CARTAS\n");
-    printf("\n");
-    printf("Escolha um atributo para comparar:\n");
-    printf("\n");
-    printf("1. Populacao\n");
-    printf("2. Area\n");
-    printf("3. PIB\n");
-    printf("4. Numero de pontos turistico\n");
-    printf("\n"); // Linha em branco para separar
-    scanf("%d", &opcao);
+// Comparação das cartas
+printf("COMPARACAO DAS CARTAS\n\n");
+printf("Escolha dois atributos da carta 1 para comparar com a carta 2:\n");
+printf("1. Populacao\n");
+printf("2. Area\n");
+printf("3. PIB\n");
+printf("4. Numero de pontos turisticos\n\n");
 
-    switch (opcao) 
-    {
-     case 1:
-     printf("Manaus - %d \n", populacao1);
-     printf("Belem - %d\n", populacao2);
+// Primeiro atributo
+do {
+    printf("Escolha o primeiro atributo (1-4): ");
+    scanf("%d", &opcao1);
+    if (opcao1 < 1 || opcao1 > 4) {
+        printf("Opcao invalida. Escolha um numero entre 1 e 4.\n");
+    }
+} while (opcao1 < 1 || opcao1 > 4);
 
-        if (populacao1 > populacao2) {
-        printf("Manaus venceu!");
-        } else if (populacao1 == populacao2) {
-        printf("Empate!!!\n");
-        } else {
-        printf("Belem venceu!");
-        }
+// Segundo atributo (não pode ser igual ao primeiro)
+do {
+    printf("Escolha o segundo atributo (diferente do primeiro): ");
+    scanf("%d", &opcao2);
+    if (opcao2 < 1 || opcao2 > 4) {
+        printf("Opcao invalida. Escolha um numero entre 1 e 4.\n");
+    } else if (opcao2 == opcao1) {
+        printf("Opcao 2 nao pode ser igual a opcao 1. Escolha outro atributo.\n");
+    }
+} while (opcao2 < 1 || opcao2 > 4 || opcao2 == opcao1);
+
+// Comparação do primeiro atributo
+switch (opcao1) {
+    case 1:
+        soma_carta1 += populacao1;
+        soma_carta2 += populacao2;
+        printf("Populacao de Manaus - %d\n", populacao1);
+        printf("Populacao de Belem - %d\n", populacao2);
         break;
     case 2:
-    printf("Manaus - %.2f \n", area1);
-    printf("Belem - %.2f\n", area2);
-   
-        if (area1 > area2) {
-        printf("Manaus venceu!");
-        } else if (area1 == area2) {
-        printf("Empate!!!\n");
-        } else {
-        printf("Belem venceu!");
-        }
+        soma_carta1 += area1;
+        soma_carta2 += area2;
+        printf("Area de Manaus - %.2f km2\n", area1);
+        printf("Area de Belem - %.2f km2\n", area2);
         break;
     case 3:
-    printf("Manaus - %.2f \n", pib1);
-    printf("Belem - %.2f\n", pib2);
-   
-        if (pib1 > pib2) {
-        printf("Manaus venceu!");
-        } else if (pib1 == pib2) {
-        printf("Empate!!!\n");
-        } else {
-        printf("Belem venceu!");
-        }
+        soma_carta1 += pib1;
+        soma_carta2 += pib2;
+        printf("PIB de Manaus - %.2f bilhoes\n", pib1);
+        printf("PIB de Belem - %.2f bilhoes\n", pib2);
         break;
     case 4:
-    printf("Manaus - %d \n", pontos_turisticos1);
-    printf("Belem - %d\n", pontos_turisticos2);
-   
-        if (pontos_turisticos1 > pontos_turisticos2) {
-        printf("Manaus venceu!");
-        } else if (pontos_turisticos1 == pontos_turisticos2) {
-        printf("Empate!!!\n");
-        } else {
-        printf("Belem venceu!");
-        }
+        soma_carta1 += pontos_turisticos1;
+        soma_carta2 += pontos_turisticos2;
+        printf("Pontos turisticos de Manaus - %d\n", pontos_turisticos1);
+        printf("Pontos turisticos de Belem - %d\n", pontos_turisticos2);
         break;
     default:
-    printf("opcao invalida");
-    }
+        printf("Opcao invalida\n");
+        return 1;
+}
+
+// Comparação do segundo atributo
+switch (opcao2) {
+    case 1:
+        soma_carta1 += populacao1;
+        soma_carta2 += populacao2;
+        printf("Populacao de Manaus - %d\n", populacao1);
+        printf("Populacao de Belem - %d\n", populacao2);
+        break;
+    case 2:
+        soma_carta1 += area1;
+        soma_carta2 += area2;
+        printf("Area de Manaus - %.2f km2\n", area1);
+        printf("Area de Belem - %.2f km2\n", area2);
+        break;
+    case 3:
+        soma_carta1 += pib1;
+        soma_carta2 += pib2;
+        printf("PIB de Manaus - %.2f bilhoes\n", pib1);
+        printf("PIB de Belem - %.2f bilhoes\n", pib2);
+        break;
+    case 4:
+        soma_carta1 += pontos_turisticos1;
+        soma_carta2 += pontos_turisticos2;
+        printf("Pontos turisticos de Manaus - %d\n", pontos_turisticos1);
+        printf("Pontos turisticos de Belem - %d\n", pontos_turisticos2);
+        break;
+    default:
+        printf("Opcao invalida\n");
+        return 1;
+}
+// RESULTADO DAS CARTAS 
+resultado = soma_carta1 > soma_carta2 ? 1 : 2;
+if (resultado == 1) {
+    printf("Manaus Venceu!!!\n");
+} else if (resultado == 2)  {
+    printf("Belem Venceu!!!\n");
+} else {
+    printf("EMPATE!!!\n");
+}
 return 0;
 }
